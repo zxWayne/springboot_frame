@@ -1,17 +1,50 @@
-package cn.zx.editor.editor.domain;
+package com.wayne.frame.util;
 
-import lombok.Data;
+import java.time.LocalDateTime;
+import java.util.HashMap;
+
 
 /**
- * Created on 2017/11/7.
- *
- * @author zlf
- * @since 1.0
+ * 返回数据的统一处理
  */
-@Data
-public class Result<T> {
-    private Integer code;
-    private String msg;
+public class Result extends HashMap<String, Object> {
 
-    private T data;
+
+    private static Result response = new Result();
+
+    /**
+     * init
+     */
+    private static void createResponse() {
+
+        response.put("data", null);
+        response.put("time", LocalDateTime.now());
+    }
+
+    public static Result ok(String message) {
+        createResponse();
+        response.put("message", message);
+        return response;
+    }
+    public static Result ok() {
+        createResponse();
+        response.put("message", "success");
+        return response;
+    }
+
+    public static Result data(Object data) {
+        createResponse();
+        response.put("code", 0);
+        response.put("data", data);
+        return response;
+    }
+
+    public static Result error(String errorMessage) {
+        createResponse();
+        response.put("code", 1);
+        response.put("message", errorMessage);
+        return response;
+    }
+
+
 }

@@ -1,9 +1,9 @@
 package com.wayne.frame.service.impl;
 
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import com.zx.springboottest.dao.UserMapper;
-import com.zx.springboottest.entity.UserEntity;
-import com.zx.springboottest.service.UserService;
+import com.wayne.frame.dao.UserMapper;
+import com.wayne.frame.entity.UserEntity;
+import com.wayne.frame.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

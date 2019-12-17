@@ -1,10 +1,9 @@
 package com.wayne.frame.dao;
 
-import com.zx.springboottest.base.SuperMapper;
-import com.zx.springboottest.entity.UserEntity;
+import com.wayne.frame.base.SuperMapper;
+import com.wayne.frame.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-
 import java.util.List;
 
 /**

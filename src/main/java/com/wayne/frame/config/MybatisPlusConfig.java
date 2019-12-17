@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
  * @date 2019-12-11 12:45
  **/
 @Configuration
-@MapperScan("com.zx.springboottest.dao*")
 public class MybatisPlusConfig {
 
 }
